@@ -161,7 +161,10 @@ void Huffman::buildHuffmanTree(string text)
 	int remain;
 	string a;
 	a = ConvertStringToBit(str, remain);
-
+	ofstream file;
+	file.open("encode.txt");
+	file << a;
+	file.close();
 	cout << "\nEncoded string is :\n" << a << '\n';
 
 	// decode the encoded string
